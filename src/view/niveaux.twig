@@ -1,0 +1,61 @@
+{% extends "base.twig" %}
+{% block content %}
+    <div class="container">
+        <h1>/Niveaux</h1>
+        <div>
+            l'intérieur de la box provient du script view/niveaux.twig.<br/>
+            l'extérieur de la box provient du script view/base.twig 
+        </div>
+        <!-- form ajouter un niveau -->
+        <div class="box">
+            <h2>Ajouter un niveau</h2>
+            <form action="/niveaux/create" method="POST">
+                <input type="text" name="niveauScolaire" value="" placeholder="Niveau Scolaire" required />
+                <input type="submit" name="/niveaux/create" value="Ajouter" />
+            </form>
+        </div>
+        <!-- todo : recherche d'un niveau  non mis en oeuvre
+        <div class="box">
+            <h2>Recherche</h2>
+            <form action="/niveaux/search" method="POST">
+                <input type="text" name="search_term" value="" placeholder="valeur à rechercher" required />
+                <input type="submit" name="submit_search_niveau" value="Search" />
+            </form>
+        </div>
+        -->
+
+        <!-- main content output -->
+        <div class="box">
+            <?php
+            $count = $this->sqlBuilder->GetDelete();
+            
+            ?>
+            <h2>Liste des niveaux({{ count }} éléments)</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Niveau scolaire</td>
+                            <td>supprimer</td>
+                            <td>modifier</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for niveau in niveaux %}
+                            <tr>
+                                <td>{{ niveau.id }}</td>
+                                <td>{{ niveau.niveauScolaire }}</td>
+                                <td><a href="/niveaux/delete/{{ niveau.id }}">delete</a></td>
+                                <td><a href="/niveaux/edit/{{ niveau.id }}">edit</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="box">
+            <!-- todo : ajouter traitement ajax -->
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Rallye Lecture</title>
+    <!-- css -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- JavaScript -->
+    <script src="/js/application.js"></script>
+</head>
+<body>
+    <!-- logo -->
+    <div class="logo">
+        Rallye Lecture<span class="number"> v0.001</span>
+    </div>
+    
+    <!-- navigation -->
+    <div class="navigation">
+        <a href="/accueil">accueil</a>
+        <a href="/subpage/page1">sous Page 1</a>
+        <a href="/subpage/page2">Sous Page 2</a>
+        <a href="/niveaux/index">Niveaux scolaire</a>
+        <a href="/enseignants/index">Enseignants</a>
+        <a href="/classes/index">Classes</a>
+        <a href="/logins/index">Login</a>
+    </div>
+
+    <!-- le contenu sera injecté via Twig -->
+    {% block content %} {% endblock %}
+</body>
+</html>

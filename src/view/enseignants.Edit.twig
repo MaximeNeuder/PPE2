@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+{% block content %}
+<div class="container">
+    <h1>Enseignants</h1>
+    <!-- form ajouter un niveau -->
+    <div>
+        <form action="/enseignants/update" method="POST">
+            <input autofocus type="text" name="nom" placeholder="Nom" value="{{ enseignant.nom }}" required />
+            <input autofocus type="text" name="prenom" placeholder="Prenom" value="{{ enseignant.prenom }}" required />
+            <input autofocus type="text" name="login" placeholder="Login" value="{{ enseignant.login }}" required />
+            <input autofocus type="password" name="password" placeholder="Password" value="{{ enseignant.password }}" required />
+            <input type="hidden" name="id" value="{{ enseignant.id }}" />
+            <input type="submit" name="/enseignants/update" value="Valider" />
+        </form>
+    </div>
+</div>
+{% endblock %}

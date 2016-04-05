@@ -1,0 +1,30 @@
+c:\users\mneuder\documents\visual studio 2012\Projects\mission2\mission2\bin\Debug\mission2.exe.config
+c:\users\mneuder\documents\visual studio 2012\Projects\mission2\mission2\obj\Debug\mission2.csprojResolveAssemblyReference.cache
+C:\Users\mneuder\Documents\Visual Studio 2012\Projects\mission2\mission2\bin\Debug\mission2.exe
+C:\Users\mneuder\Documents\Visual Studio 2012\Projects\mission2\mission2\bin\Debug\mission2.pdb
+C:\Users\mneuder\Documents\Visual Studio 2012\Projects\mission2\mission2\bin\Debug\DocX.dll
+C:\Users\mneuder\Documents\Visual Studio 2012\Projects\mission2\mission2\obj\Debug\mission2.exe
+C:\Users\mneuder\Documents\Visual Studio 2012\Projects\mission2\mission2\obj\Debug\mission2.pdb
+F:\mission2\mission2\bin\Debug\mission2.exe.config
+F:\mission2\mission2\obj\Debug\mission2.exe
+F:\mission2\mission2\obj\Debug\mission2.pdb
+G:\mission2\mission2\bin\Debug\mission2.dll.config
+G:\mission2\mission2\bin\Debug\mission2.dll
+G:\mission2\mission2\bin\Debug\mission2.pdb
+G:\mission2\mission2\bin\Debug\DocX.dll
+G:\mission2\mission2\obj\Debug\mission2.csprojResolveAssemblyReference.cache
+G:\mission2\mission2\obj\Debug\mission2.dll
+G:\mission2\mission2\obj\Debug\mission2.pdb
+I:\mission2\mission2\bin\Debug\mission2.dll.config
+I:\mission2\mission2\bin\Debug\mission2.dll
+I:\mission2\mission2\bin\Debug\mission2.pdb
+I:\mission2\mission2\bin\Debug\DocX.dll
+I:\mission2\mission2\obj\Debug\mission2.csprojResolveAssemblyReference.cache
+I:\mission2\mission2\obj\Debug\mission2.dll
+I:\mission2\mission2\obj\Debug\mission2.pdb
+E:\mission2\mission2\bin\Debug\mission2.dll.config
+E:\mission2\mission2\bin\Debug\mission2.dll
+E:\mission2\mission2\bin\Debug\mission2.pdb
+E:\mission2\mission2\obj\Debug\mission2.csprojResolveAssemblyReference.cache
+E:\mission2\mission2\obj\Debug\mission2.dll
+E:\mission2\mission2\obj\Debug\mission2.pdb

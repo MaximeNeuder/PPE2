@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+{% block content %}
+<div class="container">
+    <h1>Classe</h1>
+    <!-- form ajouter un niveau -->
+    <div>
+        <form action="/classes/update" method="POST">
+            <input type="text" name="anneeScolaire" value="" placeholder="anneeScolaire" required />
+                <select name ="idEnseignant">
+                    {% for enseignant in enseignants %}
+                        <option value ={{ enseignant.id }}> {{enseignant.nom }}</option>
+                    {% endfor %}
+                </select>
+                <select name ="idNiveau">
+                    {% for niveau in niveaux %}
+                        <option value ={{ niveau.id }}>{{ niveau.niveauScolaire }}</option>
+                    {% endfor %}
+                </select>
+                <input type="hidden" name="id" value="{{ classe.id }}" />
+                <input type="submit" name="/classes/update" value="Mettre à jour" />
+        </form>
+    </div>
+</div>
+{% endblock %}

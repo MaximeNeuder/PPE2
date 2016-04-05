@@ -1,0 +1,78 @@
+{% extends "base.twig" %}
+{% block content %}
+    <div class="container">
+        <h1>Classes</h1>
+        <div>
+            l'intérieur de la box provient du script view/niveaux.twig.<br/>
+            l'extérieur de la box provient du script view/base.twig 
+        </div>
+        <!-- form ajouter un niveau -->
+        <div class="box">
+            <h2>Ajouter une classe</h2>
+            <form action="/classes/create" method="POST">
+                <input type="text" name="anneeScolaire" value="" placeholder="anneeScolaire" required />
+                <select name ="idEnseignant">
+                    {% for enseignant in enseignants %}
+                        <option value ={{ enseignant.id }}> {{enseignant.nom }}</option>
+                    {% endfor %}
+                </select>
+                <select name ="idNiveau">
+                    {% for niveau in niveaux %}
+                        <option value ={{ niveau.id }}>{{ niveau.niveauScolaire }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" name="/classes/create" value="Ajouter" />
+            </form>
+        </div>
+        <!-- todo : recherche d'un niveau  non mis en oeuvre
+        <div class="box">
+            <h2>Recherche</h2>
+            <form action="/niveaux/search" method="POST">
+                <input type="text" name="search_term" value="" placeholder="valeur à rechercher" required />
+                <input type="submit" name="submit_search_niveau" value="Search" />
+            </form>
+        </div>
+        -->
+
+        <!-- main content output -->
+        <div class="box">
+            <?php
+            $count = $this->sqlBuilder->GetDelete();
+            
+            ?>
+            <h2>Liste des classe({{ count }} éléments)</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>IdEnseignant</td>
+                            <td>AnneeScolaire</td>
+                            <td>IdNiveau</td>
+                            <td>supprimer</td>
+                            <td>modifier</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for classe in classes %}
+                            <tr>
+                                
+                                 {{enseignant.id}}
+                                
+                                <td>{{ classe.id }}</td>
+                                <td>{{ classe.idEnseignant }}</td>
+                                <td>{{ classe.anneeScolaire }}</td>
+                                <td>{{ classe.idNiveau }}</td>
+                                <td><a href="/classes/delete/{{ classe.id }}">delete</a></td>
+                                <td><a href="/classes/edit/{{ classe.id }}">edit</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="box">
+            <!-- todo : ajouter traitement ajax -->
+        </div>
+    </div>
+{% endblock %}
